@@ -28,7 +28,7 @@ export abstract class BaseEntity implements IBaseEntity {
         return Reflect.getMetadata(TABLE_METADATA_KEY, this) as string;
     }
 
-    // INSERT if id doesn't exist, UPDATE if it does
+    
     async save(): Promise<void> {
         const keys = Object.keys(this);
         const columns = keys.join(', ');
