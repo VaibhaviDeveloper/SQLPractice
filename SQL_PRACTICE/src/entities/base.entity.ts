@@ -42,7 +42,7 @@ export abstract class BaseEntity implements IBaseEntity {
             ON DUPLICATE KEY UPDATE ${updates}
         `;
 
-        // values twice: once for INSERT, once for UPDATE
+        
         await db.execute(query, [...values, ...values]);
     }
 
